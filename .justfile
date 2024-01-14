@@ -10,3 +10,7 @@ fedora-dev-build:
 # download, build and install helix editor
 helix-install: fedora-dev-build
 	just recipe-build helix-builder
+
+# download, build and install just
+just-install: fedora-dev-build
+	just recipe-build just-builder
