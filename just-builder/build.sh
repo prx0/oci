@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
+. ../.utils.sh
+
 set -e
 
-podman build . --output=build --target=just
+"$(oci_client)" build . --output=build --target=build
 mv build/just "${HOME}/.local/bin/."

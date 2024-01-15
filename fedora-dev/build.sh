@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
+. ../.utils.sh
 
 set -e
 
-podman build . -t fedora-dev:39
+TAG="${TAG:-39}"
+
+"$(oci_client)" build . -t "fedora:${TAG}"
+

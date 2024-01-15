@@ -4,6 +4,6 @@ WORKDIR /helix
 ENV RUSTFLAGS "-C target-feature=-crt-static"
 RUN cargo install --path helix-term --locked
 
-FROM scratch as helix
+FROM scratch as build
 COPY --from=builder /root/.cargo/bin/hx hx
 COPY --from=builder /helix/runtime runtime
