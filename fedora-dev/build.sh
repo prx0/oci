@@ -5,5 +5,5 @@ set -e
 
 TAG="${TAG:-39}"
 
-"$(oci_client)" build . -t "fedora:${TAG}"
+"$(oci_client)" build . -t "fedora-dev:${TAG}"
 
